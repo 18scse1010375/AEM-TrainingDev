@@ -1,0 +1,20 @@
+<nav class="navbar">
+
+    <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+         data-sly-call="${clientlib.all @ categories='trainingdev.nav'}" />
+
+
+
+    <sly data-sly-use.model="com.trainingdev.core.models.NavigationModel">
+
+        <ul class="navbar-list">
+            <sly data-sly-list.articleList="${model.articleListDataBeanList}">
+                <li class="navbar-item">
+                    <a href="${articleList.path}.html" class="navbar-link" target="_blank"> ${articleList.title}
+                    </a>
+                </li>
+            </sly>
+        </ul>
+    </sly>
+</nav>
+

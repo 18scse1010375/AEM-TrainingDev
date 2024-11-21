@@ -1,0 +1,56 @@
+<div class="articlelist">
+
+
+    <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+         data-sly-call="${clientlib.all @ categories='trainingdev.articlelist'}" />
+
+
+
+
+    </sly>
+
+
+
+
+    <sly data-sly-use.model="com.trainingdev.core.models.ArticleListModel">
+
+
+
+
+        <sly data-sly-list.articleList="${model.articleListDataBeanList}">
+
+
+
+
+
+
+            <div class="cards">
+
+
+                <div class="cards-container">
+
+                    <h2> ${articleList.title} </h2>
+
+                    <h4> ${articleList.path} </h4>
+
+                    <h4> ${articleList.description} </h4>
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+        </sly>
+
+    </sly>
+
+
+</div>
