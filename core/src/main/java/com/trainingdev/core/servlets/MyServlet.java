@@ -39,6 +39,8 @@ public class MyServlet extends SlingAllMethodsServlet {
                           final SlingHttpServletResponse response) throws ServletException, IOException {
 
         LOGGER.debug("Servlet Code Started!!");
+
+            System.out.println("Hi");
         ResourceResolver resourceResolver = request.getResourceResolver();
         Resource resource=resourceResolver.getResource(RESOURCE_PATH);
 
